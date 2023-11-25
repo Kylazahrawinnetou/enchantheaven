@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" type="text/css" href="stail.css" /> -->
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: putih;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: black;
+    }
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: black;
+    }
+
+    .form-group input {
+      width: 90%;
+      padding: 8px;
+      margin: 8px 4px;
+      font-size: 16px;
+      border: 1px solid palevioletred;
+      border-radius: 10px;
+    }
+
+    .form-group button {
+      background-color: palevioletred;
+      color: #fff;
+      /* border: 5px; */
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .form-group button:hover {
+  background-color: rgb(237, 20, 121); 
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form class="login-form" action="#" method="post">
+      <div class="form-group">
+        <label for="username">Username :</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
+
+<script>
+function loginUser() {
+  // Gantilah logika verifikasi login sesuai kebutuhan
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+
+  // Contoh verifikasi sederhana
+  if (username === "pengguna" && password === "katasandi") {
+    // Login berhasil, arahkan ke halaman utama
+    window.location.href = "NYOBA.html";
+    return false; // Mencegah pengiriman formulir
+  } else {
+    // Login gagal, mungkin tampilkan pesan kesalahan atau tindakan lainnya
+    alert("Login gagal. Coba lagi.");
+    return false; // Mencegah pengiriman formulir
+  }
+}
+</script>
